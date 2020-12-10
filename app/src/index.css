@@ -11,3 +11,23 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+body{
+  background: grey
+}
+
+.App{
+  width:40%;
+  margin: 0 auto;
+  background: cornflowerblue;
+  border-radius: 6rem;
+}
+
+button{
+  height: 2rem;
+  width: auto;
+  border-radius: 1rem;
+  background: white;
+  border: 0px;
+  color:cornflowerblue;
+}

@@ -6,7 +6,7 @@ import { getFact } from '../actions/actions';
 const Facts = ({ fact, isFetching, error, getFact }) => {
     useEffect(() => {
         getFact();
-    }, []);
+    },[]);
 
     if (error) {
         return <h2> Houston, we have a problem: {error}</h2>;
@@ -20,20 +20,20 @@ const Facts = ({ fact, isFetching, error, getFact }) => {
         getFact();
     }
 
+ 
     return (
         <>
         <h2>Useless Fact: {fact}</h2>
         <button onClick={handleClick}>Learn something useless</button>
         </>
-    )
+    );
 };
-
 const mapStateToProps = state => {
     return {
-        fact: state.fact,
+        fact: state.quote,
         isFetching: state.isFetching,
         error: state.error
     };
 };
 
-export default connect(mapStateToProps, {getFact}(Facts));
+export default connect(mapStateToProps, {getFact})(Facts);
